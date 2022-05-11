@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--veryDarkDesaturatedBlue1);
+}
+
+:root {
+  /* Theme 1 */
+
+  /* Backgrounds */
+  --veryDarkDesaturatedBlue1: hsl(222, 26%, 31%); /* (main background) */
+  --veryDarkDesaturatedBlue2: hsl(
+    223,
+    31%,
+    20%
+  ); /*(toggle background, keypad background) */
+  --veryDarkDesaturatedBlue3: hsl(224, 36%, 15%); /*(screen background) */
+
+  /* Keys */
+  --desaturatedDarkBlue1: hsl(225, 21%, 49%); /*(key background)*/
+  --desaturatedDarkBlue2: hsl(224, 28%, 35%); /*(key shadow)*/
+
+  --red: hsl(6, 63%, 50%); /*(key background, toggle)*/
+  --darkRed: hsl(6, 70%, 34%); /*(key shadow)*/
+
+  --lightGrayishOrange: hsl(30, 25%, 89%); /*(key background)*/
+  --grayishOrange: hsl(28, 16%, 65%); /*(key shadow) */
+
+  /* Text */
+  --veryDarkGrayishBlue: hsl(221, 14%, 31%);
+  --white: #fff;
+ 
+  
+}
+
+.calcBody {
+  display: block;
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--veryDarkDesaturatedBlue1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-container {
+  display: block;
+  width: 85%;
+  margin: auto;
+  padding: 0em 0.5em;
+  color: var(--white);
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store {
+  display: inline; 
+  background-color:var(--lightGrayishOrange) ;
+  color: var(--veryDarkGrayishBlue);
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding:.5em;
+
+}
+
+.store:hover {
+  opacity: .5;
+}
+
+.header2 {
+  display: block;
+  width: 40%;
+  padding-top: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+.toggle {
+  display: block;
+  width: auto;
+  text-align: end;
+}
+
+.number-toggle {
+  margin-left: 7px;
+  letter-spacing: 6px;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 55px;
+  height: 20px;
+  background: var(--veryDarkDesaturatedBlue2);
+  border-radius: 100px;
+  padding: 0em 0.25em;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--red);
+  border: 1px solid var(--red); 
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: var(--red);
+  border: 1px solid var(--red);  
+  cursor: pointer;
+}
+
+/* Display Section */
+
+.section1-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 85%;
+  height: 85px;
+  margin: auto;
+  padding: 2em 2.5em;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--veryDarkDesaturatedBlue3);
+  color: var(--white);
+}
+
+.addYellow {
+  color: hsl(52, 100%, 62%);
+}
+
+
+
+.display {
+  display: block;
+  font-size: 3.6rem;
+}
+
+/* Keypad Section */
+
+.section2-container {
+  display: block;
+  width: 85%;
+  margin: 2.5em auto;
+  padding: 2.5em 1.5em;
+  border-radius: 10px;
+  background-color: var(--veryDarkDesaturatedBlue2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.griditem {
+  background-color: var(--lightGrayishOrange);
+  box-shadow: 0px 3px var(--grayishOrange);
+  border-radius: 10px;
+  padding: 17px 3px 10px 3px;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--veryDarkGrayishBlue);
+  cursor: pointer;
+}
+
+/* Special Keys */
+
+.delKey {
+  background-color: var(--desaturatedDarkBlue1);
+  box-shadow: 0px 3px var(--desaturatedDarkBlue2);
+  color: var(--white);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.resetKey {
+  background-color: var(--desaturatedDarkBlue1);
+  box-shadow: 0px 3px var(--desaturatedDarkBlue2);
+  color: var(--white);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  grid-column: 1 / span 2;
+}
+
+.equalKey {
+  background-color: var(--red);
+  box-shadow: 0px 3px var(--darkRed);  
+  color: var(--white);
+  grid-column: 3 / span 2;
+}
+
+.addBlack {
+  color: #000;
+}
+
+
+.multiply {
+  color: transparent;
+}
+
+.multiply:before,
+.multiply:after {
+  position: absolute;
+  left: 76.5%;
+  top: 72.5%;
+  content: ' ';
+  height: 18px;
+  width: 3px;
+  background-color: var(--veryDarkGrayishBlue);
+}
+.multiply:before {
+  transform: rotate(45deg);
+}
+.multiply:after {
+  transform: rotate(-45deg);
+}
+
+/* Footer */
+
+.footer {
+  display: block;
+  margin-top: 1.5em;
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.me {
+  font-family: 'Water Brush', cursive;
+  font-size: 2rem;
+  color: var(--darkRed);
+}
+
+
+/* Save Pop_UP */
+
+.container-save {
+  display: block;
+  width: 80%;
+  min-height: 150px;
+  padding: .5em;
+  text-align: center;
+  font-size: 2rem;
+  background-color: grey;
+  border: 1px solid black;
+  position: absolute;
+  top: 30%;
+  left: -150%;
+  transition-duration: 1s;
+}
+
+.active {
+  left: 10%;
+}
+
+.saveTotal{
+  display: block;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+/* Load Pop-Up */
+
+.save-list {
+  display: block;
+  width: 85%;
+  min-height: 80px;
+  margin: auto;
+  margin-bottom: 1em;
+  padding: .5em;
+  background-color: var(--white);
+  overflow-y: scroll;
+  overflow-x: auto;
+  
+}

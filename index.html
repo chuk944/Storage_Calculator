@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="style.css">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <script src="script.js" defer></script>
+  
+  <title>Storage Calculator</title>
+
+  
+</head>
+<body>
+  
+  <main class="calcBody">
+    <header class="header-container">
+      <div class="flex-row">
+<div class="storage">
+  <button class="store" type="button" id="save">Save</button>
+  <button class="store" type="button" id="load">Load</button>
+
+</div>        
+        <h2 id="head2" class="header2">theme</h2>
+        <div class="toggle">
+          <label for="themeSwitch" class="number-toggle" id="head3">1 2 3</label><br>
+            <input type="range" name="themeSwitch" class="slider" id="themeSwitch" min="1" max="3" step="1" value="1" oninput="theme()">
+          
+        </div>
+      </div>
+    </header>
+
+<div id="save-result" class="container-save ">
+  <form action="" method="post">
+    <label for="label">Label</label>
+    <input type="text" class="saveTotal" name="label">
+    <label for="label">Date</label>
+    <input type="date" class="saveTotal" name="date">
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+<div id="load-result" class="container-save ">
+  <form action="" method="post">
+    <label for="id">ID Number</label>
+    <input type="text" class="saveTotal" name="id">
+    <div class="save-list"></div>
+    <button type="submit">Load</button>
+    <button type="submit">Remove</button>
+
+  </form>
+</div>
+    
+    
+      <section class="section1-container">
+        <div id="displayId" class="display">399,981</div>
+      </section>
+    
+      <section class="section2-container">
+        <div class="grid">
+  <div class="griditem">7</div>
+  <div class="griditem">8</div>
+  <div class="griditem">9</div>
+  <div class="griditem delKey">del</div>
+  <div class="griditem">4</div>
+  <div class="griditem">5</div>
+  <div class="griditem">6</div>
+  <div class="griditem">+</div>
+  
+  <div class="griditem">1</div>
+  <div class="griditem">2</div>
+  <div class="griditem">3</div>
+  <div class="griditem">-</div>
+  <div class="griditem">.</div>
+  <div class="griditem">0</div>
+  <div class="griditem">/</div>
+  <div class="griditem multiply">*</div>
+  <div class="griditem resetKey">Reset</div>
+  <div id="equal" class="griditem equalKey">=</div>
+    
+        </div>
+      </section>
+  </div>
+ 
+  </main>
+
+
+  
+  <footer class="footer">
+    <div class="attribution">
+      
+      Coded by <p class="me">Charles Kondrath</p>
+    </div>
+  </footer>
+</body>
+</html>
